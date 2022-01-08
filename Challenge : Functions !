@@ -1,0 +1,15 @@
+
+def most_frequent(string1):
+    dictn={}
+    
+    for n in string1:
+        keys=dictn.keys()
+        if n in keys:
+            dictn[n]+=1
+        else:
+            dictn[n]=1
+            
+    sorted_by_value= dict(sorted(dictn.items(), key=lambda v:v[1],reverse=True))
+    return sorted_by_value
+   
+print((most_frequent("Mississippi")))
